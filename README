@@ -1,0 +1,17 @@
+parsemidi is a simple MIDI file parser that prints note events to stdout.
+
+usage: java ParseMidi [-t bpm] [-n track] file
+
+The -t option overrides the internal tempo with the given bpm. If a track
+number is given with the -n option, the parser will only output events from
+this particular track.
+
+The output is one line per note in the following format:
+
+[onset time] [offset time] [track no] [note] [velocity]
+
+Limitations:
+- No support for SMTP time offsets
+- No support for tempo changes across tracks
+
+Michael Massberg - michael (at) massberg (dot) org
